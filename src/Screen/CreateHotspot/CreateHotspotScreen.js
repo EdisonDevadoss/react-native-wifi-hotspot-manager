@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { View, Text, Button, TextInput, ToastAndroid } from "react-native";
 import styles from "./CreateHotspotScreenStyleSheet";
+//Third party
 import Hotspot from "react-native-wifi-hotspot";
 
 class CreateHotspotScreen extends React.Component {
@@ -15,6 +16,8 @@ class CreateHotspotScreen extends React.Component {
       password: ""
     };
   }
+  //Create your hotspot
+  //This work succesfully once you enable hotspot. Otherwise it throw errors
   onCreate = () => {
     Hotspot.create(
       this.state,
