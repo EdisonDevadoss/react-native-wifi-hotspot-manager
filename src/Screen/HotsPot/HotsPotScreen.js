@@ -12,6 +12,9 @@ import styles from "./HotsPotScreenStyleSheet";
 import Hotspot from "react-native-wifi-hotspot";
 
 class HotsPotScreen extends React.Component {
+  static navigationOptions = {
+    title: "Home"
+  };
   constructor(props) {
     super(props);
   }
@@ -30,7 +33,6 @@ class HotsPotScreen extends React.Component {
   };
   //Disable HotsPot
   doDisable = () => {
-
     Hotspot.disable(
       () => {
         ToastAndroid.show("Hotspot Disabled", ToastAndroid.SHORT);
@@ -40,6 +42,10 @@ class HotsPotScreen extends React.Component {
         ToastAndroid.show(err.toString(), ToastAndroid.SHORT);
       }
     );
+  };
+  //go to create screen
+  goToCreate = () => {
+    this.props.navigation.navigate("CreateHotspot");
   };
   render() {
     return (
@@ -56,6 +62,10 @@ class HotsPotScreen extends React.Component {
             Disable & Check if it already disabled
           </Text>
           <Button title="Disable" onPress={this.doDisable} />
+        </View>
+        <View style={{ marginBottom: 10 }}>
+          <Text style={styles.subtitle}>Set your hotspot settings</Text>
+          <Button title="Create" onPress={this.goToCreate} />
         </View>
       </View>
     );
