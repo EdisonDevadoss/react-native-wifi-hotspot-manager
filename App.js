@@ -8,10 +8,10 @@
  */
 
 import React, { Component } from "react";
-import HotsPotScreen from "./src/Screen/HotsPot";
+import AppNavigator from "./src/boot";
 
 export default class App extends Component<Props> {
   render() {
-    return <HotsPotScreen />;
+    return <AppNavigator />;
   }
 }

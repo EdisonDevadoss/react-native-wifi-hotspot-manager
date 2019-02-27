@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -11,13 +12,16 @@ const styles = StyleSheet.create({
     height: 60,
     lineHeight: 50
   },
-  buttonView: {
-    marginBottom: 10
-  },
   subtitle: {
     fontSize: 16,
     fontWeight: "bold",
     marginBottom: 5
+  },
+  textBox: {
+    height: 40,
+    borderColor: "gray",
+    borderWidth: 1,
+    marginBottom: 10
   }
 });
 
